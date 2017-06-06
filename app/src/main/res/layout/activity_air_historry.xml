@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/history_head"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue_head"
+        android:gravity="center_vertical"
+        android:padding="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@mipmap/left"
+            android:gravity="center"
+            android:onClick="airHistoryBack"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="历史数据"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/history_head">
+
+        <RelativeLayout
+            android:id="@+id/history_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/select_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/historyType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+        <RadioGroup
+            android:id="@+id/history_btn_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/history_header"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:weightSum="6">
+
+            <RadioButton
+                android:id="@+id/dust_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/bg_radiobtn_yangchen_selecter"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/dust"
+                android:textColor="@drawable/color_text_selecter_radiobtn_statement"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/wind_speed_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/bg_radiobtn_speed_selecter"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/wind_speed"
+                android:textColor="@drawable/color_text_selecter_radiobtn_statement"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/wind_direction_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:button="@null"
+                android:drawableTop="@drawable/bg_radiobtn_direction_selecter"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/wind_direction"
+                android:textColor="@drawable/color_text_selecter_radiobtn_statement"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/airpressure_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/bg_radiobtn_qiya_selecter"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/air_pressure"
+                android:textColor="@drawable/color_text_selecter_radiobtn_statement"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/temperature_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:button="@null"
+                android:drawableTop="@drawable/bg_radiobtn_wendu_selecter"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/temperature"
+                android:textColor="@drawable/color_text_selecter_radiobtn_statement"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/humidity_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/bg_radiobtn_shidu_selecter"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/humidity"
+                android:textColor="@drawable/color_text_selecter_radiobtn_statement"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/viewContain"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/history_btn_container"
+            android:weightSum="6">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:background="@color/blue_head"></View>
+        </LinearLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/viewContain"></android.support.v4.view.ViewPager>
+
+    </RelativeLayout>
+</RelativeLayout>

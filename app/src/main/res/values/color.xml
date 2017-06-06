@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_listview_item_normal">#FFFFFF</color>
+    <color name="bg_listview_item_press">#000000</color>
+    <color name="bg_blue">#5a9edb</color>
+</resources>

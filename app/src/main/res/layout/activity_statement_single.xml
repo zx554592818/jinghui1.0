@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/single_head"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue_head"
+        android:gravity="center_vertical"
+        android:padding="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@mipmap/left"
+            android:gravity="center"
+            android:onClick="airStatementSingleBack"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/subMonitorSingleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/subMonitorSingleType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/single_head">
+
+        <include
+            android:id="@+id/head"
+            layout="@layout/item_single" />
+
+        <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+            android:id="@+id/rl_modulename_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/head">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/head"
+                android:layout_weight="1"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@color/white"
+                android:dividerHeight="1dp"></ListView>
+        </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn"
+        android:onClick="showPictureAirSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@mipmap/tubiao"
+        android:drawablePadding="4dp"
+        android:text="@string/showchart" />
+</RelativeLayout>

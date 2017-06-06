@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_modulename_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      >
+        <ListView
+            android:id="@+id/humidity_lv"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_above="@+id/btn"></ListView>
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:drawablePadding="4dp"
+        android:layout_alignParentBottom="true"
+        android:drawableLeft="@mipmap/tubiao"
+        android:layout_centerHorizontal="true"
+        android:text="@string/showchart" />
+</RelativeLayout>

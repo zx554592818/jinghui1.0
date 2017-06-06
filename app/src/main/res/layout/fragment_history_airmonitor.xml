@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.example.jinghui.ui.SlideBannerViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/titleAirMonitor"></com.example.jinghui.ui.SlideBannerViewPager>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/viewPager"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/observation_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="@string/observation" />
+
+                <TextView
+                    android:id="@+id/site_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/town_tv"
+                    android:layout_alignRight="@id/town_tv"
+                    android:layout_below="@+id/town_tv"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="center_vertical"
+                    android:hint="@string/site"
+                    android:padding="4dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hintGray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/time_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/observation_tv"
+                    android:layout_below="@+id/site_tv"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/spinner_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:singleLine="true"
+                    android:text="@string/time_type" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/town_tv"
+                    android:layout_below="@+id/site_tv"
+                    android:layout_marginTop="32dp"
+                    android:layout_toRightOf="@+id/time_type"
+                    android:padding="4dp"
+                    android:textSize="14sp"></Spinner>
+
+                <LinearLayout
+                    android:id="@+id/endTm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/town_tv"
+                    android:layout_below="@+id/headTm"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_bg"
+                        android:padding="4dp"
+                        android:text="@string/endtime" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <EditText
+                            android:id="@+id/dateFinish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edittext"
+                            android:focusable="false"
+                            android:padding="4dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/timeFinish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edittext"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:padding="4dp"
+
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/inquire_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_alignRight="@+id/town_tv"
+                    android:layout_below="@+id/endTm"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/bg_btn_selecter"
+                    android:text="@string/inquire" />
+
+                <LinearLayout
+                    android:id="@+id/headTm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/time_type"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_bg"
+                        android:padding="4dp"
+                        android:text="@string/starttime" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <EditText
+                            android:id="@+id/dateStart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edittext"
+                            android:focusable="false"
+                            android:padding="4dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/timeStart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edittext"
+                            android:focusable="false"
+                            android:padding="4dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/town_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="center_vertical"
+                    android:hint="@string/town"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hintGray"
+                    android:textSize="14sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/observation_tv" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

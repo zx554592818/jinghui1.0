@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_adapter"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+
+        android:clickable="false"
+        android:gravity="center"
+        android:textColor="@drawable/color_text_selecter_dialog"
+        android:textSize="20sp" />
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.example.jinghui.ui.SlideBannerViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/titleAirMonitor"></com.example.jinghui.ui.SlideBannerViewPager>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/viewPager"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/monitor_all_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/spinner_bg"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/observation" />
+
+        <Spinner
+            android:id="@+id/observation_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/monitor_all_tv"
+
+            android:entries="@array/monitor_all_place"
+            android:gravity="center"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/time_type_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/observation_sp"
+            android:layout_marginTop="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/spinner_bg"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/time_type" />
+
+        <Spinner
+            android:id="@+id/type_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/observation_sp"
+            android:layout_marginTop="32dp"
+            android:layout_toRightOf="@+id/time_type_all"
+            android:entries="@array/monitor_all_type"
+            android:gravity="center"
+            android:padding="4dp" />
+
+
+        <LinearLayout
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/type_sp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/spinner_bg"
+                android:padding="4dp"
+                android:text="@string/select_date" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/monitor_all_tv"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/input"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/monitorAllDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext"
+                    android:focusable="false"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/monitorAllTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext"
+                    android:focusable="false"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/inquireAll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_below="@+id/input"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_btn_selecter"
+            android:text="@string/inquire" />
+    </RelativeLayout>
+</RelativeLayout>

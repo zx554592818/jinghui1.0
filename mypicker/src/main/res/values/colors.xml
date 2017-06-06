@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#214d90</color>
+    <color name="colorPrimaryDark">#214d90</color>
+    <color name="colorAccent">#214d90</color>
+    <color name="black">#000000</color>
+    <color name="monitorBlue">#003399</color>
+    <color name="hintGray">#808080</color>
+    <color name="blue_normal">#6bbcf1</color>
+    <color name="blue_press">#224b89</color>
+    <color name="blue_check">#1f4c66</color>
+    <color name="white">#FFFFFF</color>
+    <color name="bgc">#1f4c66</color>
+    <color name="shallow_yellow">#ffc876</color>
+    <color name="blue_head">#214d90</color>
+    <color name="red">#ff00</color>
+    <color name="line">#22000000</color>
+    <color name="blue_sky">#55b0f2</color>
+    <color name="unselect_gray">#7e8393</color>
+</resources>

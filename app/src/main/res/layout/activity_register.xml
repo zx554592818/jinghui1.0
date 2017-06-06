@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/registerHead"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue_head"
+        android:gravity="center_vertical"
+        android:padding="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@mipmap/left"
+            android:gravity="center"
+            android:onClick="registerBack"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/registerHead"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:id="@+id/bb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/input_account" />
+
+            <EditText
+                android:id="@+id/registerAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tvAccount"
+                android:background="@color/gray"
+                android:digits="@string/filter_vcode"
+                android:inputType="textVisiblePassword"
+                android:maxLength="12"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/registerAccount"
+                android:layout_below="@+id/registerAccount"
+                android:text="@string/tishi1" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/cc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bb"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/input_password" />
+
+            <EditText
+                android:id="@+id/registerPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tvPassword"
+                android:background="@color/gray"
+                android:digits="@string/filter_vcode"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/confirm_password" />
+
+            <EditText
+                android:id="@+id/passwordConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tvConfirm"
+                android:background="@color/gray"
+                android:digits="@string/filter_vcode"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/passwordConfirm"
+                android:layout_below="@+id/passwordConfirm"
+                android:text="@string/tishi2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ee"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_below="@+id/dd"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/passwordShow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:onClick="showPassword"
+                android:text="@string/showpassword"
+                android:textSize="14sp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:onClick="reset"
+                android:text="@string/reset"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ee"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_register_select"
+            android:onClick="registerConfirm"
+            android:padding="8dp"
+            android:text="@string/register" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_below="@+id/ee"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

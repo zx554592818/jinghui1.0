@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="monitor_all_place" >
+        <item>所有 </item>
+        <item>乡镇办</item>
+        <item>建设工地</item>
+    </string-array>
+    <string-array name="monitor_all_type">
+        <item>日数据</item>
+        <item>小时数据</item>
+    </string-array>
+</resources>

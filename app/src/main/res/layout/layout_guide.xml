@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sam.widget.guide_view.simple.SimpleGuideView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/guide_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/last_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/jinghuikeji" />
+
+</com.sam.widget.guide_view.simple.SimpleGuideView>

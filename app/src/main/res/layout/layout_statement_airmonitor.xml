@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:weightSum="3">
+
+        <RadioGroup
+            android:id="@+id/monitor_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/monitor_all"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bg_monitor_all_select"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/monitor_all"
+                android:textColor="@drawable/color_text_selecter_radiobtn_statement"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/monitor_single"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/bg_monitor_single_select"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/monitor_single"
+                android:textColor="@drawable/color_text_selecter_radiobtn_statement"
+                android:textSize="14sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/statement_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+    </FrameLayout>
+</LinearLayout>

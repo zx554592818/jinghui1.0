@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/history_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/backward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+             />
+
+        <TextView
+            android:id="@+id/select_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+
+    <RadioGroup
+        android:id="@+id/history_btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/history_header"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <RadioButton
+            android:id="@+id/dust_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radiobtn_subhistory_select"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/ben"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/wind_speed_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radiobtn_subhistory_select"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/methyben"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/wind_direction_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radiobtn_subhistory_select"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/doubleben"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/airpressure_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radiobtn_subhistory_select"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/acetic"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/temperature_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radiobtn_subhistory_select"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/butene"
+            android:textSize="20sp" />
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/history_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/history_btn_container"></FrameLayout>
+
+</RelativeLayout>

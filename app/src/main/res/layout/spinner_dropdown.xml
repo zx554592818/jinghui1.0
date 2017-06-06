@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+<TextView
+    android:layout_margin="5dp"
+    android:ellipsize="marquee"
+    android:id="@+id/spinner_item_label"
+    android:orientation="vertical"
+    android:singleLine="true"
+    android:textColor="@color/black"
+    android:textSize="16sp"
+    android:background="@color/blue_head"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+</RelativeLayout>
